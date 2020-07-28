@@ -1,0 +1,23 @@
+
+<div class="container">
+	<div class="row"></div>
+	<div class="col-xs-3"></div>
+	<div class="col-xs-6">
+		<h1>プロフィール編集フォーム</h1>
+        <%=form_for(@user) do |f| %>
+        <h3>名前</h3>
+        <%=f.text_field :name %>
+        <h3>自己紹介</h3>
+        <%=f.text_area :introduction %>
+        <%=f.attachment_field :profile_image %>
+
+        <%=f.submit "保存する" %>
+        <% end %>
+	</div>
+	<div class="col-xs-3"></div>
+</div>
+
+
+
+
+

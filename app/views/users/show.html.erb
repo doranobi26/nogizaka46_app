@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">
+			<h3 class="user-imfo">ユーザー情報</h3>
+			<table class="table">
+				<thead>
+					<tr><%#= attachment_images_tag @user, :profile_image, size: "100x100", format: 'jpeg', class: "img-circle", fallback: "no_image.jpg" %></tr>
+				</thead>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th><%=@user.name %></th>
+					</tr>
+				</thead>
+				    <tr>
+				    	<th>introduction</th>
+				    	<th><%=@user.introduction %></th>
+				    </tr>
+			</table>
+
+			<%=link_to edit_user_path(@user.id), class:"btn-btn default btn-lg btn-block" do %>
+			<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+			<% end %>
+		</div>
+	</div>
+</div>
