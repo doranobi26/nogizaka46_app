@@ -6,13 +6,15 @@ class UsersController < ApplicationController
 
   def index
     @users=User.all
-     @member=Member.new
+    @member=Member.new
   end
 
   def show
-    @member=Member.new
+    #@members=@user.members
     @user=User.find(params[:id])
-  end
+    @member=Member.new
+    @members=@user.members
+    end
 
   def edit
     @user=User.find(params[:id])
