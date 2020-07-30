@@ -13,7 +13,7 @@ class MembersController < ApplicationController
 
 
 	def show
-		@members=Member.all
+		#@members=Member.all
 		@member=Member.find(params[:id])
 		@user=@member.user
 	end
