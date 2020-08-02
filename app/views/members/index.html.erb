@@ -44,7 +44,7 @@
 
 				<tbody>
 				  <tr>
-					<%=@members.each do |member| %>
+					<% @members.each do |member| %>
 					 <td><%=attachment_image_tag member.user, :profile_image, size: "50x50", format: 'jpeg', class: "img-circle", fallback: "no_image.jpg" %>
 					 </td>
 
